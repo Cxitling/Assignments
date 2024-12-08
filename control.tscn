@@ -1,0 +1,251 @@
+[gd_scene load_steps=20 format=3 uid="uid://db5pwnbc1yebf"]
+
+[ext_resource type="AudioStream" uid="uid://bmvhgbxs3sme4" path="res://sound/sci_fi_door-6451.mp3" id="1_i5kkx"]
+[ext_resource type="Texture2D" uid="uid://don68nnpy3hws" path="res://Screenshot 2024-12-08 195129.png" id="1_ww7fx"]
+[ext_resource type="AudioStream" uid="uid://b6vidixfthbeu" path="res://sound/space-explosion-with-reverb-101449.mp3" id="2_3yvi4"]
+[ext_resource type="Script" path="res://button.gd" id="2_nwvd1"]
+[ext_resource type="AudioStream" uid="uid://b5wxjcbaf0myt" path="res://sound/space-insect-99970.mp3" id="3_1aewx"]
+[ext_resource type="AudioStream" uid="uid://pwdoysialnua" path="res://sound/glitch-01-231255.mp3" id="3_hewou"]
+[ext_resource type="AudioStream" uid="uid://ctgumlufd5qr8" path="res://sound/space-ship-102433.mp3" id="4_cycx5"]
+[ext_resource type="AudioStream" uid="uid://cn03n68tno4gn" path="res://sound/glitch-sound-232391.mp3" id="4_q31ri"]
+[ext_resource type="Script" path="res://button_2.gd" id="4_v0va0"]
+[ext_resource type="AudioStream" uid="uid://b2lw421ge5r5w" path="res://sound/space-slash-236689.mp3" id="5_i5h55"]
+[ext_resource type="Script" path="res://button_3.gd" id="6_arhco"]
+[ext_resource type="AudioStream" uid="uid://pfqlnqeqi640" path="res://sound/snare-space-shot-80932.mp3" id="6_p5mgc"]
+[ext_resource type="Script" path="res://button_4.gd" id="8_gr3i5"]
+[ext_resource type="Script" path="res://button_5.gd" id="10_hu3xc"]
+[ext_resource type="AudioStream" uid="uid://b4cx03dicawcy" path="res://sound/space-zap-217411.mp3" id="11_xlwoc"]
+[ext_resource type="Script" path="res://button_6.gd" id="12_7xj7i"]
+[ext_resource type="Script" path="res://button_7.gd" id="14_tmigq"]
+[ext_resource type="Script" path="res://button_8.gd" id="16_s8vhr"]
+[ext_resource type="Script" path="res://button_9.gd" id="18_qsihb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+
+[node name="Screenshot2024-12-08195129" type="Sprite2D" parent="."]
+position = Vector2(577, 324.75)
+scale = Vector2(2.44068, 2.09871)
+texture = ExtResource("1_ww7fx")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0.0117647, 0.0117647, 0.00392157, 1)
+self_modulate = Color(0.996078, 1, 1, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 405.0
+offset_right = 284.0
+offset_bottom = 513.0
+script = ExtResource("2_nwvd1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("3_hewou")
+volume_db = 24.0
+bus = &"glitch 1"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(0.00392157, 0, 0.00392157, 1)
+self_modulate = Color(1, 1, 0.984314, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 541.0
+offset_right = 285.0
+offset_bottom = 648.0
+script = ExtResource("4_v0va0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button2"]
+stream = ExtResource("4_q31ri")
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(0, 0.00392157, 0.00392157, 1)
+offset_left = 431.0
+offset_top = 264.0
+offset_right = 714.0
+offset_bottom = 372.0
+script = ExtResource("6_arhco")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button3"]
+stream = ExtResource("1_i5kkx")
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(0.00392157, 0, 0, 1)
+self_modulate = Color(0.972549, 0.988235, 0.984314, 1)
+offset_top = 266.0
+offset_right = 283.0
+offset_bottom = 374.0
+script = ExtResource("8_gr3i5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button4"]
+stream = ExtResource("6_p5mgc")
+
+[node name="Button5" type="Button" parent="."]
+modulate = Color(0.00392157, 0, 0, 1)
+offset_left = 867.0
+offset_top = 407.0
+offset_right = 1150.0
+offset_bottom = 515.0
+script = ExtResource("10_hu3xc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button5"]
+stream = ExtResource("2_3yvi4")
+
+[node name="Button6" type="Button" parent="."]
+modulate = Color(0, 0, 0.00392157, 1)
+offset_left = 869.0
+offset_top = 540.0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("12_7xj7i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button6"]
+stream = ExtResource("3_1aewx")
+
+[node name="Button7" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 431.0
+offset_top = 406.0
+offset_right = 714.0
+offset_bottom = 514.0
+script = ExtResource("14_tmigq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button7"]
+stream = ExtResource("4_cycx5")
+
+[node name="Button8" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 430.0
+offset_top = 539.0
+offset_right = 713.0
+offset_bottom = 647.0
+script = ExtResource("16_s8vhr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button8"]
+stream = ExtResource("5_i5h55")
+
+[node name="Button9" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 868.0
+offset_top = 267.0
+offset_right = 1151.0
+offset_bottom = 375.0
+script = ExtResource("18_qsihb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button9"]
+stream = ExtResource("11_xlwoc")
+
+[node name="Label" type="Label" parent="Button9/AudioStreamPlayer"]
+offset_left = 829.565
+offset_top = 490.117
+offset_right = 1189.56
+offset_bottom = 637.117
+text = "INSECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 700.085
+offset_top = 54.9597
+offset_right = 1060.09
+offset_bottom = 201.96
+rotation = -0.00172797
+theme_override_font_sizes/font_size = 60
+text = "SPACE JAM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -60.7506
+offset_top = 217.897
+offset_right = 299.249
+offset_bottom = 364.897
+rotation = 0.00403135
+text = "SNARE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -58.1035
+offset_top = 340.615
+offset_right = 301.896
+offset_bottom = 487.615
+text = "GLITCH 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -54.099
+offset_top = 479.439
+offset_right = 305.901
+offset_bottom = 626.439
+text = "GLITCH 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 393.072
+offset_top = 216.475
+offset_right = 753.072
+offset_bottom = 363.475
+text = "DOOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 395.742
+offset_top = 355.299
+offset_right = 755.742
+offset_bottom = 502.299
+text = "SPACE SHIP"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 391.737
+offset_top = 487.448
+offset_right = 751.737
+offset_bottom = 634.448
+text = "SLASH"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 818.886
+offset_top = 213.806
+offset_right = 1178.89
+offset_bottom = 360.806
+text = "ZAP"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label9" type="Label" parent="."]
+offset_left = 833.569
+offset_top = 355.299
+offset_right = 1193.57
+offset_bottom = 502.299
+text = "EXPLOSION"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[connection signal="pressed" from="Button5" to="Button5" method="_on_pressed"]
+[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]
+[connection signal="pressed" from="Button7" to="Button7" method="_on_pressed"]
+[connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
+[connection signal="pressed" from="Button9" to="Button9" method="_on_pressed"]
